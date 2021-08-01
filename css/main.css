@@ -1,6 +1,6 @@
- /* html{
-  scroll-behavior: smooth;
-}  */
+:root {
+  --mainColor: #f7600d;
+}
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -13,6 +13,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+::selection {
+  background-color: rgba(247, 96, 13, 0.8);
+}
 button:focus {
   outline: 0;
 }
@@ -23,10 +26,7 @@ body {
   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 }
 .main-color {
-  color: #f7600d;
-}
-::selection {
-  background-color: rgba(247, 96, 13, 0.8);
+  color: var(--mainColor);
 }
 h1,
 h3,
@@ -41,23 +41,23 @@ button {
 .navbar {
   background-color: rgba(78, 84, 92, 0.8);
 }
-.navbar .navbar-nav{
+.navbar .navbar-nav {
   margin-left: 32.5rem;
 }
-@media(max-width: 992px){
-  .navbar .navbar-nav{
+@media (max-width: 992px) {
+  .navbar .navbar-nav {
     text-align: center;
     margin-left: 0;
   }
 }
 .navbar .navbar-brand span {
-  color: #f7600d;
+  color: var(--mainColor);
 }
 .navbar .navbar-brand {
   font-weight: 700;
   font-size: 1.4rem;
 }
-.navbar .navbar-nav li a{
+.navbar .navbar-nav li a {
   margin-right: 1rem;
   font-size: 18px;
 }
@@ -73,11 +73,10 @@ button {
   position: relative;
   overflow: hidden;
 }
-
 .header .content {
   margin-top: 12rem;
 }
-@media (min-width: 768px) and (max-width:992px){
+@media (min-width: 768px) and (max-width: 992px) {
   .header .content {
     margin-top: 14rem;
   }
@@ -126,8 +125,8 @@ button {
   }
 }
 .header .content button:hover {
-  background-color: #f7600d;
-  border: 1px solid #f7600d;
+  background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
 }
 .header .content .icon2 {
   display: block;
@@ -151,7 +150,7 @@ button {
   color: #4e4949;
 }
 .skills i {
-  color: #f7600d;
+  color: var(--mainColor);
   font-size: 60px;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -162,7 +161,7 @@ button {
 }
 .skills i:hover {
   color: #fff;
-  background-color: #f7600d;
+  background-color: var(--mainColor);
   cursor: pointer;
 }
 .skills p {
@@ -197,8 +196,8 @@ button {
   padding: 9.5px 0;
   font-size: 1.2rem;
   margin: 31% 40% 31% 0;
-  background-color: #f7600d;
-  border: 1px solid #f7600d;
+  background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
   transition: 0.5s all ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -258,7 +257,7 @@ button {
 
 .our-works button:hover {
   color: #fff;
-  background-color: #f7600d;
+  background-color: var(--mainColor);
 }
 .our-works .features h3 {
   font-size: 40px;
@@ -328,9 +327,9 @@ button {
   user-select: none;
 }
 .our-works .item .over button:hover {
-  color: #f7600d;
+  color: var(--mainColor);
   background-color: #fff;
-  border: 1px solid #f7600d;
+  border: 1px solid var(--mainColor);
 }
 /* ----- End our-works ----- */
 /* ----- Start Carousel ----- */
@@ -385,8 +384,8 @@ button {
 
 /* ----- End Carousel ----- */
 /* ----- Start our-team ----- */
-.our-team{
-  padding-top:75px ;
+.our-team {
+  padding-top: 75px;
 }
 .our-team .features p {
   margin: 18px 0;
@@ -400,10 +399,10 @@ button {
   margin-top: 80px;
   transition: all 0.5s ease-in-out;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .our-team .card {
     margin-top: 20px;
-    width: 100% !important ;
+    margin-left: 1.8rem;
   }
   .card-body {
     padding: 1.25rem 1.25rem 1.25rem 3rem;
@@ -426,7 +425,11 @@ button {
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
 }
-
+@media (max-width: 992px) {
+  .our-team .card img {
+    margin-left: 15px;
+  }
+}
 
 .our-team .card:hover img {
   filter: none;
@@ -476,7 +479,7 @@ p {
 .say-hello button {
   display: block;
   color: #fff;
-  background-color: #f7600d;
+  background-color: var(--mainColor);
   max-width: 170px;
   border-radius: 9px;
   padding: 6px 0 7px;
@@ -520,11 +523,11 @@ p {
     margin-left: 0.5rem;
   }
 }
-@media (min-width: 768px) and (max-width:992px){
+@media (min-width: 768px) and (max-width: 992px) {
   .say-hello .icons {
     margin-left: 22rem;
     margin-top: -3.5rem;
-}
+  }
 }
 .say-hello .icons i {
   border-radius: 50%;
@@ -548,9 +551,9 @@ p {
   font-size: 19.5px;
 }
 .say-hello .icons i:hover {
-  border: 1px solid #f7600d;
+  border: 1px solid var(--mainColor);
   background-color: #fff;
-  color: #f7600d;
+  color: var(--mainColor);
 }
 
 /* ----- End say-hello ----- */

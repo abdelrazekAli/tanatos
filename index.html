@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Tanatos</title>
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="icon" href="img/image.png">
 </head>
 
@@ -49,11 +49,12 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,</br>Quod
                     maxime dolore uptas uptatibus praesentium sit amet
                 </p>
-                <button class="hire-us">hire us</button>
-                <button class="our-works">our works</button>
-                <i class="fa fa-angle-down icon2"></i>
+                <a href="#contact"><button class="hire-us">hire us</button></a>
+                <a href="#works"><button class="our-works">our works</button></a>
+                <a href="#about"><i class="fa fa-angle-down icon2"></i></a>
             </div>
         </div>
+    </div>
     </div>
     <!-- End Header -->
     <!-- Start Skills -->
@@ -348,7 +349,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 copy  text-md-left">
-                    &copy; 2020 copyright design studio
+                    &copy; 2020 copyright
                 </div>
                 <div class="col-md-6 company text-md-right">
                     designed by abdelrazek
@@ -357,25 +358,9 @@
         </div>
     </div>
     <!-- End Footer -->
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $('#home li a[href*=#]').click(function () {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-                && location.hostname == this.hostname) {
-                var $target = $(this.hash);
-                $target = $target.length && $target
-                    || $('[name=' + this.hash.slice(1) + ']');
-                if ($target.length) {
-                    var targetOffset = $target.offset().top;
-                    $('html,body')
-                        .animate({ scrollTop: targetOffset }, 1000);
-                    return false;
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

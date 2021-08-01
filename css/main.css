@@ -1,6 +1,27 @@
 :root {
   --mainColor: #f7600d;
 }
+::selection {
+  background-color: rgba(247, 96, 13, 0.8);
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h3,
+h5,
+button {
+  text-transform: uppercase;
+}
+button:focus {
+  outline: 0;
+}
+.main-color {
+  color: var(--mainColor);
+}
+
+/* ----- Start scrollbar style ----- */
+
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -13,31 +34,10 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-::selection {
-  background-color: rgba(247, 96, 13, 0.8);
-}
-button:focus {
-  outline: 0;
-}
-body {
-  position: relative;
-  overflow-y: scroll;
-  height: 100%;
-  -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
-}
-.main-color {
-  color: var(--mainColor);
-}
-h1,
-h3,
-h5,
-button {
-  text-transform: uppercase;
-}
-.form-control {
-  font-size: 1.2rem;
-}
+
+/* ----- End scrollbar style ----- */
 /* ----- Start Header ----- */
+
 .navbar {
   background-color: rgba(78, 84, 92, 0.8);
 }
@@ -73,6 +73,7 @@ button {
   position: relative;
   overflow: hidden;
 }
+
 .header .content {
   margin-top: 12rem;
 }
@@ -133,6 +134,7 @@ button {
   position: absolute;
   left: 48.2%;
   top: 37rem;
+  color: #f1f1f1 !important;
   border: 1px solid #fff;
   border-radius: 50%;
   padding: 5px 8px;
@@ -399,10 +401,10 @@ button {
   margin-top: 80px;
   transition: all 0.5s ease-in-out;
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .our-team .card {
     margin-top: 20px;
-    margin-left: 1.8rem;
+    width: 100% !important ;
   }
   .card-body {
     padding: 1.25rem 1.25rem 1.25rem 3rem;
@@ -424,11 +426,6 @@ button {
   filter: gray;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
-}
-@media (max-width: 992px) {
-  .our-team .card img {
-    margin-left: 15px;
-  }
 }
 
 .our-team .card:hover img {
@@ -494,11 +491,7 @@ p {
   margin-left: 15.2%;
   margin-bottom: 25px;
 }
-@media (max-width: 576px) {
-  .say-hello button {
-    margin-left: 6.5rem;
-  }
-}
+
 .say-hello form input,
 .say-hello form textarea {
   margin-left: 15.2%;
@@ -515,8 +508,7 @@ p {
   background-color: #da5107;
 }
 .say-hello .icons {
-  margin-left: 25rem;
-  margin-top: 0.1rem;
+  margin-left: 36%;
 }
 @media (max-width: 576px) {
   .say-hello .icons {
@@ -554,6 +546,9 @@ p {
   border: 1px solid var(--mainColor);
   background-color: #fff;
   color: var(--mainColor);
+}
+.form-control {
+  font-size: 1.2rem;
 }
 
 /* ----- End say-hello ----- */
